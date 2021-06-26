@@ -316,8 +316,8 @@ void Game::mainmenu()
    				 //menu_run = false;
    				 TTF_Quit();
    				 SDL_DestroyWindow(window);
-		       SDL_DestroyRenderer(renderTarget);
-		       SDL_DestroyTexture(menu_tex);
+		                 SDL_DestroyRenderer(renderTarget);
+		                 SDL_DestroyTexture(menu_tex);
    				 menu_tex = nullptr;
    				 SDL_Quit();
    				 break;
@@ -333,12 +333,12 @@ void Game::mainmenu()
 				 		Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,2,2048);
 				 		Mix_Music *backgroundMusic = Mix_LoadMUS("bgmusic.mp3");
 				 		Mix_PlayMusic(backgroundMusic,-1);
-   				  menu_run = false;
+   				       menu_run = false;
    				 }
 
    				 else if(a.motion.x>=430 && a.motion.x<=550 && a.motion.y>=330 && a.motion.y<350)
    				 {
-					   SDL_RenderClear(renderTarget);
+					 SDL_RenderClear(renderTarget);
    					 SDL_RenderCopy(renderTarget,help_tex, NULL, NULL);
 
    					 SDL_Event event1;
@@ -358,22 +358,22 @@ void Game::mainmenu()
    								 {    //gameState = GameState::EXIT_FROM_TITLE;
    									 TTF_Quit();
    									 SDL_DestroyWindow(window);
-		                 SDL_DestroyRenderer(renderTarget);
-		                 SDL_DestroyTexture(help_tex);
+		                                                         SDL_DestroyRenderer(renderTarget);
+		                                                         SDL_DestroyTexture(help_tex);
    									 help_tex = nullptr;
-   								   SDL_Quit();
+   								         SDL_Quit();
    									 break;
    								 }
    							 }
    						 }
-						   SDL_RenderClear(renderTarget);
+						 SDL_RenderClear(renderTarget);
    						 SDL_RenderCopy(renderTarget,help_tex,NULL,NULL);
    						 SDL_RenderPresent(renderTarget);
    					 }
    			   }
    				 else if(a.motion.x>=430 && a.motion.x<=520 && a.motion.y>=370 && a.motion.y<390)
    				 {
-					   SDL_RenderClear(renderTarget);
+					 SDL_RenderClear(renderTarget);
    					 SDL_RenderCopy(renderTarget, credit_tex, NULL, NULL);
    					 SDL_Event event2;
    					 bool running = true;
@@ -391,10 +391,10 @@ void Game::mainmenu()
    								 {
    									 TTF_Quit();
    									 SDL_DestroyWindow(window);
-		                 SDL_DestroyRenderer(renderTarget);
-		                 SDL_DestroyTexture(credit_tex);
+		                                                         SDL_DestroyRenderer(renderTarget);
+		                                                         SDL_DestroyTexture(credit_tex);
    									 credit_tex = nullptr;
-   								   SDL_Quit();
+   								         SDL_Quit();
    									 break;
    								 }
    							 }
@@ -407,7 +407,7 @@ void Game::mainmenu()
    				 }
    				 else if(a.motion.x>=430 && a.motion.x<=550 && a.motion.y>=410 && a.motion.y<435)
    				 {
-					   SDL_RenderClear(renderTarget);
+					 SDL_RenderClear(renderTarget);
    					 SDL_RenderCopy(renderTarget, quit_tex, NULL, NULL);
    					 SDL_Event b;
    					 bool exit_run = true;
@@ -434,8 +434,8 @@ void Game::mainmenu()
    										 //exit_run = false;
    										 TTF_Quit();
    										 SDL_DestroyWindow(window);
-		                   SDL_DestroyRenderer(renderTarget);
-		                   SDL_DestroyTexture(quit_tex);
+		                                                                 SDL_DestroyRenderer(renderTarget);
+		                                                                 SDL_DestroyTexture(quit_tex);
    										 SDL_Quit();
    									 }
    									 else if(b.motion.x>=538 && b.motion.x<=570 && b.motion.y>=380 && b.motion.y<405)
@@ -445,7 +445,7 @@ void Game::mainmenu()
    								 }
    							 }
    						 }
-						   SDL_RenderClear(renderTarget);
+						 SDL_RenderClear(renderTarget);
    						 SDL_RenderCopy(renderTarget,quit_tex,NULL,NULL);
    						 SDL_RenderPresent(renderTarget);
    					 }
